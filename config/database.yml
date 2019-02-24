@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  #database: db/production.sqlite3
+  database: tasteRoR_app_production
+  username: tasteRoR_app
+  password: <%= ENV['TASTEROR_APP_DATABASE_PASSWORD'] %>
