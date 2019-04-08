@@ -10,6 +10,11 @@ gem 'bootstrap-sass', '3.3.7'
 #For hash a password in Users Model
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.12'
+# User for probe semi-realistic users
+gem 'faker', '<=1.7.3'
+# For paginate objects
+gem 'will_paginate', '3.1.6'
+gem 'bootstrap-will_paginate', '1.0.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

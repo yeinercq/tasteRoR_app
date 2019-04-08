@@ -4,6 +4,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
 	def setup
 		@user = users(:yeiner)
+		@other_user = users(:andres)
 	end
 
 	test "login with invalid information" do
@@ -48,6 +49,21 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 		log_in_as(@user, remember_me: '1')
 		#Log in again and verify that the cookie is deleted
 		log_in_as(@user, remember_me: '0')
-    assert_empty cookies[:remember_token]
+		assert_empty cookies[:remember_token]
+	end
+
+	test "should redirect destroy when not logged in" do
+		assert_no_difference 'User.count' do
+			delete user_path(@user)
+		end
+		assert_redirected_to login_url
+	end
+
+	test "should redirect destroy when logged in as non-admin user" do
+		log_in_as(@other_user)
+		assert_no_difference 'User.count' do
+			delete user_path (@user)
+		end
+		assert_redirected_to root_url
 	end
 end
