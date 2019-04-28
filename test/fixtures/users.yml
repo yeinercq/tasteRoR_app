@@ -8,6 +8,14 @@ yeiner:
   activated: true
   activated_at: <%= Time.zone.now%>
 
+diana:
+  name: Diana Valderrama
+  email: diana@valderrama.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now%>
+
 andres:
   name: Andres Aldana
   email: andres@aldana.com

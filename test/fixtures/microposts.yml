@@ -8,12 +8,12 @@ orange:
 tau_manifesto:
   content: "I am building a dream"
   created_at: <%= 3.years.ago %>
-  user: yeiner
+  user: sergio
 
 cat_video:
   content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
   created_at: <%= 2.hours.ago %>
-  user: yeiner
+  user: sergio
 
 most_recent:
   content: "Writing a short test"

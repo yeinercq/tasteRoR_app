@@ -1,0 +1,18 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+one:
+  follower: yeiner
+  followed: sergio
+
+two:
+  follower: yeiner
+  followed: andres
+
+three:
+  follower: sergio
+  followed: jose
+
+four:
+  follower: andres
+  followed: yeiner
+
+
